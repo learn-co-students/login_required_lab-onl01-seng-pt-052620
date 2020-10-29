@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
 
-  resources :secrets, only: [:show]
+  get '/secrets/show' => 'secrets#show'
+
+  # resources :secrets, only: [:show]
 end
